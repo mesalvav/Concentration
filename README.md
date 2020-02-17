@@ -1,3 +1,4 @@
 # Concentration
 following Stanford course fall2011. 
-Pick two cards of the same
+Pick two cards of the same.
+Memory Game

@@ -12,11 +12,29 @@ class Concentration
 {
     
     var cards = [Card]()
-    func chooseCard(at index:Int){
-        if cards[index].isFaceUp {
-            cards[index].isFaceUp = false
-        } else {
-            cards[index].isFaceUp = true
+    var indexOfOneAndOnlyFaceUpCard: Int?
+    
+    // play the game
+    //
+    func chooseCard(at index:Int){ // index of the UI buttons
+       // not matched cards
+        if !cards[index].isMatched {
+            if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
+                // check if cards matched
+                if cards[matchIndex].identifier == cards[index].identifier {
+                    cards[matchIndex].isMatched = true
+                    cards[index].isMatched = true
+                }
+                cards[index].isFaceUp = true
+                indexOfOneAndOnlyFaceUpCard = nil
+            } else {
+                // either no cards or 2 cards face up
+                for flipDownindex in cards.indices {
+                    cards[flipDownindex].isFaceUp = false
+                }
+                cards[index].isFaceUp = true
+                indexOfOneAndOnlyFaceUpCard = index
+            }
         }
     }
     
