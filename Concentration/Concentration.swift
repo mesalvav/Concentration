@@ -11,7 +11,7 @@ import Foundation
 class Concentration
 {
     
-    var Cards = Array<Card>()
+    var cards = Array<Card>()
     func chooseCard(at index:Int){
         
     }
