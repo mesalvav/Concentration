@@ -44,5 +44,13 @@ class Concentration
             cards += [card, card]
         }
         // TODO: SHUFFLE THE cards
+        
+        for card in cards {
+            let myrandom = Int(arc4random_uniform(UInt32( numberOfPairsOfCards)))
+            print(myrandom)
+            let appendThisCardAtEnd = cards.remove(at: myrandom)
+            cards.append(appendThisCardAtEnd)
+            print(card.identifier)
+        }
     }
 }
