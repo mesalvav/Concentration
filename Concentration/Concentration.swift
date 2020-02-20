@@ -46,7 +46,7 @@ struct Concentration
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 // check if cards matched
-                if cards[matchIndex].identifier == cards[index].identifier {
+                if cards[matchIndex] == cards[index] {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
@@ -72,12 +72,12 @@ struct Concentration
         }
         // TODO: SHUFFLE THE cards
         
-        for card in cards {
+        for _ in cards {
             let myrandom = Int(arc4random_uniform(UInt32( numberOfPairsOfCards)))
-            print(myrandom)
+            //print(myrandom)
             let appendThisCardAtEnd = cards.remove(at: myrandom)
             cards.append(appendThisCardAtEnd)
-            print(card.identifier)
+            //print(card.identifier)
         }
     }
 }
