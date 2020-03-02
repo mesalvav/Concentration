@@ -14,13 +14,14 @@ class ConcentrationThemeChooseViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     // MARK: - Themes
     
     let themes = [
-        "Sports":"⚽️,🏀,🏈,⚾️,🎾,🏐,🏉,🎱,🏓,⛷,🎳,⛳️",
-        "Animals":"🐶,🐔,🦊,🐼,🦀,🐪,🐓,🐋,🐙,🦄,🐵",
-        "Faces":"😀,😂,😎,😫,😰,😴,🙄,🤔,😘,😁"
+        "Sports":"⚽️🏀🏈⚾️🎾🏐🏉🎱🏓⛷🎳⛳️",
+        "Animals":"🐶🐔🦊🐼🦀🐪🐓🐋🐙🦄🐵",
+        "Faces":"😀😂😎😫😰😴🙄🤔😘😁"
     ]
     
     
